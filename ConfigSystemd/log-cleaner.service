@@ -1,0 +1,13 @@
+[Unit]
+Description=Nettoyage des journaux système
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/log-cleaner.sh
+RemainAfterExit=no
+
+[Install]
+WantedBy=multi-user.target
+
+

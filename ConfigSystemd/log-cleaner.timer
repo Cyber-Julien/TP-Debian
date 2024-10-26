@@ -1,0 +1,10 @@
+[Unit]
+Description=Exécuter le nettoyage des journaux toutes les heures
+
+[Timer]
+OnBootSec=15min
+OnUnitActiveSec=1h
+Unit=log-cleaner.service
+
+[Install]
+WantedBy=timers.target
